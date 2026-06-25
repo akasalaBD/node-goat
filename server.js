@@ -141,8 +141,8 @@ MongoClient.connect(db, (err, db) => {
         */
     });
 
-    // Insecure HTTP connection
-    http.createServer(app).listen(port, () => {
+    // Use secure HTTPS protocol
+    https.createServer(httpsOptions, app).listen(port, () => {
         console.log(`Express http server listening on port ${port}`);
     });
 
